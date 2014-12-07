@@ -1,11 +1,11 @@
 ## About
-Agoge - Training Management Application
+[Agoge](http://en.wikipedia.org/wiki/Agoge) - Training Management Application
 
 ## Installation Steps
 1. `git clone https://github.com/budhrg/agoge.git`
 2. `cd agoge`
 3. Run
-   `bundle install'
+   `bundle install`
 4. Add database related changes to `config/database.yml`
 5. Run
    `rake db:create db:migrate`
