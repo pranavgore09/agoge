@@ -8,7 +8,7 @@
    `bundle install`
 4. Add database related changes to `config/database.yml`
 5. Run
-   `rake db:create db:migrate`
+   `rake db:create db:migrate db:seed`
 6. Run
    `rails server`
 7. Open `localhost:3000` in your favorite browser
