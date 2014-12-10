@@ -11,12 +11,10 @@ User.delete_all
 end
 
 # topic priority
-PRIORITY = %w(urgent normal low)
-
 Topic.delete_all
 1.upto(20).each do |num|
   Topic.create! do |topic|
     topic.name = "Topic #{num}"
-    topic.priority = PRIORITY[num % 3]
+    topic.description = "This is description of Topic #{num}"
   end
 end
