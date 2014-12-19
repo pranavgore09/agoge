@@ -2,9 +2,10 @@ class CreateUsers < ActiveRecord::Migration
   def up
     create_table(:users, primary_key: :userid) do |t|
       t.string :useremployeeid, limit: 6, default: nil
-      t.string :username, limit: 40, default: nil
-      t.string :email, default: nil
-      t.string :uid, limit: 50, default: nil
+      t.string :username,       limit: 40, default: nil
+      t.string :email,          null: false, default: ''
+      # Don't delete. Used for ldap
+      t.string :uid,            limit: 50, default: nil
 
       t.timestamps
     end

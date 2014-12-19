@@ -38,3 +38,5 @@ group :development, :test do
   gem 'simplecov'
   gem 'rails_best_practices'
 end
+
+gem 'devise'

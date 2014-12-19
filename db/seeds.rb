@@ -5,6 +5,7 @@ User.delete_all
   User.create! do |user|
     user.useremployeeid = "V#{num}"
     user.username = "User #{num}"
+    user.password = "user#{num}@agoge"
     user.email = "user#{num}@abc.com"
     user.uid = "user_#{num}"
   end
