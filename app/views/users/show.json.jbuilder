@@ -2,6 +2,7 @@ json.extract! @user, :id, :useremployeeid, :username, :email
 
 json.topics @user.topics do |topic|
   json.name topic.name
+  json.id topic.id
   json.description topic.description
   json.priority topic.priority_by_user(@user.id)
   json.attended topic.present_by_user(@user.id)

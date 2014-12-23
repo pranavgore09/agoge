@@ -1,0 +1,67 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2">
+			<button type="button" class="requestNow btn btn-info">Request Now</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2">
+			<div class="topic_request"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2">
+			<h3>Requested Topics</h3>
+			<table id="requestedTopics" class="row-border responsive datatable" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>priority</th>
+					<th>Requested On</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% for u in @requested: %>
+				<tr>
+					<td><%= u.get('name') %> </td>
+					<td><%= u.get('priority') %></td>
+					<td><%= u.get('created_at') %></td>
+					<td>
+						<button type="button" class="edit btn btn-info btn-sm" data-modelid="<%= u.cid %>">Edit</button>
+					</td>
+				</tr>
+			<% end %>
+			</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2">
+			<h3>Attended Topics</h3>
+			<table id="attendedTopics" class="row-border responsive datatable" cellspacing="0" width="100%">
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>priority</th>
+					<th>Requested On</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% for u in @attended: %>
+				<tr>
+					<td><%= u.get('name') %> </td>
+					<td><%= u.get('priority') %></td>
+					<td><%= u.get('created_at') %></td>
+					<td>Edit</td>
+				</tr>
+			<% end %>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+

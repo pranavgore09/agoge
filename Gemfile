@@ -30,7 +30,6 @@ gem 'unicorn-rails'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-gem 'jquery-datatables-rails', '~> 2.2.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -40,3 +39,6 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'backbone-on-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails', '~> 3.1.1'
